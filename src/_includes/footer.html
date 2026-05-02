@@ -1,0 +1,9 @@
+<footer>
+  <ul>
+  <li><a href="/about">{{ site.author.name }}</a></li>
+  {% for i in site.author.socials %}
+  <li><a rel="me" href="{{ i.href }}">{{ i.label }}</a></li>
+  {% endfor %}
+  <li><a href="/rss.xml">RSS</a></li>
+  </ul>
+</footer>

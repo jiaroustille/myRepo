@@ -1,0 +1,21 @@
+{% extends "_layouts/base.html" %}
+
+{% block content %}
+<article>
+
+  <section>
+    <h1>{{ title }}</h1>
+    {% dateTime pub, upd %}
+  </section>
+
+  <section>
+    {{ content | safe }}
+  </section>
+
+  <section>
+    {% include "tags.html" %}
+    {{ author.name }}
+  </section>
+  
+</article>
+{% endblock %}
