@@ -1,0 +1,15 @@
+---
+permalink: /writings/index.html
+title: Writings
+layout: base.html
+col: writings
+---
+
+<ul>
+  {% for i in collections[col] %}
+  <li>
+    <a href="{{ i.url }}"><h2>{{ i.data.title }}</h2></a>
+    <p>{{ i.rawInput | safe | genDescription }}</p>
+  </li>
+  {% endfor %}
+</ul>
