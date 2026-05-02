@@ -1,0 +1,157 @@
+:root {
+  --font-color: CanvasText;
+  --font-family: system-ui;
+  --font-size: 16px;
+  --font-weight: 400;
+  --letter-spacing: 0;
+  --line-height: 1.5;
+  --background: Canvas;
+
+  --h1-size: 2.5rem;  /* 40px */
+  --h2-size: 2rem;    /* 32px */
+  --h3-size: 1.75rem; /* 28px */
+  --h4-size: 1.5rem;  /* 24px */
+  --h5-size: 1.25rem; /* 20px */
+  --h6-size: 1.125rem;/* 18px */
+
+  color-scheme: light dark;
+}
+
+* {
+  /* all: unset; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--font-color);
+  background: var(--background);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  text-wrap: pretty;
+  cursor: default;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+html, body { min-height: 100%; }
+
+/*
+html, body,
+div, section, article, 
+aside, nav, main, header, footer,
+p, h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+table, thead, tbody, tfoot, tr, th, td,
+form, fieldset, legend,
+figure, figcaption, noscript,
+blockquote, pre { display: block; }
+style, script, head { display: none; }
+*/
+
+h1 { font-size: var(--h1-size); font-weight: 700; }
+h2 { font-size: var(--h2-size); font-weight: 600; }
+h3 { font-size: var(--h3-size); font-weight: 600; }
+h4 { font-size: var(--h4-size); font-weight: 500; }
+h5 { font-size: var(--h5-size); font-weight: 500; }
+h6 { font-size: var(--h6-size); font-weight: 500; }
+
+pre, code { font-style: monospace; }
+pre { white-space: pre; overflow-x: scroll; }
+
+img, picture, video, canvas, svg, iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select, a { font: inherit; color: inherit; }
+
+ul, ol { list-style: none; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead th, tfoot td, caption { font-weight: 600; text-align: left;}
+tbody tr:nth-child(even) { background: color-mix(in srgb, var(--font-color) 5%, transparent); }
+table, th, td { border: 1px solid color-mix(in srgb, var(--font-color) 20%, transparent); }
+
+hr {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, var(--font-color) 20%, transparent);
+  margin: 1rem 0;
+}
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+  border: 1px solid color-mix(in srgb, var(--font-color) 20%, transparent);
+  background: color-mix(in srgb, var(--background) 95%, transparent);
+}
+
+:focus { outline: 2px solid Highlight; outline-offset: -2px; }
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible { outline: 2px solid Highlight; outline-offset: -2px; }
+
+button,
+input,
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button, select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="file"], 
+a[href] { cursor: pointer; }
+
+textarea,
+[contenteditable="true"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"]
+{ cursor: text; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { cursor: pointer !important; }
+
+:disabled { cursor: not-allowed; }
+
+audio, video { all: revert; cursor: pointer !important;}

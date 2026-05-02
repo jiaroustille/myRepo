@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2026 年 05 月 02 日 | My Site</title>
+<link rel="canonical" href="https://example.com/diary/2026-05-02.html">
+<meta name="description" content="Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…">
+
+<meta name="author" content="Jia-Rou">
+
+<link rel="me" href="https://github.com/jiaroustille">
+
+<link rel="me" href="https://bsky.app/profile/jiaroustille.bsky.social">
+
+
+<meta property="og:title" content="2026 年 05 月 02 日">
+<meta property="og:description" content="Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/diary/2026-05-02.html">
+<meta property="og:site_name" content="example.com">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2026 年 05 月 02 日">
+<meta name="twitter:description" content="Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…">
+
+<link rel="icon" href="/myRepo/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/myRepo/assets/img/favicon.png">
+
+<link rel="alternate" type="application/rss+xml" href="/myRepo/rss.xml" title="example.com RSS Feed">
+
+<link rel="stylesheet" href="/myRepo/assets/styles/reset.css">
+<link rel="stylesheet" href="/myRepo/assets/styles/style.css">
+</head>
+<body>
+  <header>
+  <a href="/myRepo/"><img href="/assets/img/favicon.png" alt="Site Signature Icon"></a>
+  <nav>
+    <ul>
+      <li><a href="/myRepo/about">About</a></li>
+      <li><a href="/myRepo/diary/">Diary</a></li>
+      <li><a href="/myRepo/writings/">Writings</a></li>
+    </ul>
+  </nav>
+</header>
+  
+<article>
+  
+  <section>
+    <h1>2026 年 05 月 02 日</h1>
+    <p>Today I made some filters that may or may not come into use sometime. I find the <code>.eleventy.js</code> to get cluttered
+very easily so I am practicing splitting it up into multiple files such as <code>_11ty/</code>. The filters seem to be the
+easiest for me to understand and make, shortcodes and collections are still a bit out of reach. Though, I'll be
+reading the docs and learning as I go.</p>
+<h2>Casing</h2>
+<pre><code class="language-js">toUpperCase(str) { return str.toUpperCase() },
+toLowerCase(str) { return str.toLowerCase() },
+</code></pre>
+<p>These do exactly what you'd expect them to, and I haven't even used them yet...</p>
+<h2>Deslugify</h2>
+<pre><code class="language-js">export default {
+  deslugify(str) {
+    return str
+      .replace(/[-_]+/g, &quot; &quot;) // replace fake spaces
+      .replace(/\b\w/g, c =&gt; c.toUpperCase()) // upper case on new words
+  }
+}
+</code></pre>
+<h2>Date</h2>
+<p>I use a helper function that is not exported to the <code>.eleventy.js</code>.</p>
+<pre><code class="language-js">function safeDate(input) {
+  const d = new Date(input)
+  return isNaN(d) ? null : d
+}
+</code></pre>
+<pre><code class="language-js">export default {
+  toISOstring(inp) {
+    const date = safeDate(inp) // validate
+    return date ? date.toISOString() : &quot;&quot;
+  }
+}
+</code></pre>
+<h2>Description</h2>
+<pre><code class="language-js">export default {
+  genDescription(str) {
+    if (!str) return &quot;&quot;;
+
+    let clean = str.replace(/&lt;[^&gt;]*&gt;/g, &quot;&quot;) // html
+    clean = clean.replace(/^#{1,6}\s*/gm, &quot;&quot;) // headings
+    clean = clean.replace(/^&gt;\s*/gm, &quot;&quot;) // block quotes
+    clean = clean.replace(/^\s*[-*+]\s+/gm, &quot;&quot;) // lists
+    clean = clean.replace(/\s+/g, &quot; &quot;).trim() // whitespace
+
+    if (clean.length &lt;= 120) return clean
+    const short = clean.slice(0, 120)
+    const trimmed = short.trimEnd().replace(/\s+\S*$/, &quot;&quot;)
+
+    return trimmed + &quot;…&quot;;
+  }
+}
+</code></pre>
+
+  </section>
+
+  <section>
+    <ul>
+  
+</ul>
+    Jia-Rou
+  </section>
+
+</article>
+
+  <footer>
+  <ul>
+  <li><a href="/myRepo/about">Jia-Rou</a></li>
+  
+  <li><a rel="me" href="https://github.com/jiaroustille">GitHub</a></li>
+  
+  <li><a rel="me" href="https://bsky.app/profile/jiaroustille.bsky.social">BlueSky</a></li>
+  
+  <li><a href="/myRepo/rss.xml">RSS</a></li>
+  </ul>
+</footer>
+</body>
+
+</html>
