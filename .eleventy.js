@@ -1,6 +1,7 @@
 import filters from "./src/_11ty/filters.js"
 import collections from "./src/_11ty/collections.js"
 import shortcodes from "./src/_11ty/shortcodes.js"
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
   Object.keys(filters).forEach((name) => { eleventyConfig.addFilter(name, filters[name]) })
@@ -10,6 +11,8 @@ export default function (eleventyConfig) {
       return shortcodes[name](...args, this.ctx.collections)
     })
   })
+
+  eleventyConfig.addPlugin(HtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy("./src/routes/assets/")
   eleventyConfig.addWatchTarget("./src/routes/assets/")
@@ -25,6 +28,8 @@ export default function (eleventyConfig) {
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+
+    pathPrefix: "/myRepo/"
   }
 }
