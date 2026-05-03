@@ -6,7 +6,7 @@ col: diary
 ---
 
 <ul>
-  {% for i in collections[col] %}
+  {% for i in collections[col] | reverse %}
   <li>
     <a href="{{ i.url }}"><h2>{{ i.data.title }}</h2></a>
     <p>{{ i.rawInput | safe | genDescription }}</p>

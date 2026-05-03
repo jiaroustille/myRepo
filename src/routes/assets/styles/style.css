@@ -63,9 +63,10 @@ body > main { grid-area: main; }
 body > header { grid-area: header; display: flex; align-items: center; justify-content: space-between; }
 body > footer { grid-area: footer; display: flex; align-items: center; justify-content: center; }
 
-body > header > nav > ul { display: flex; gap: var(--md); align-items: center; } /* TODO: REMOVE LIST STYLE ON FIRST NTH CHILD */
+body > header > nav > ul { display: flex; gap: var(--md); align-items: center; }
 body > header > nav { display: flex; gap: var(--xxs); align-items: center; } 
-body > footer  > ul { display: flex; gap: var(--md); align-items: center; }
+body > footer  > nav > ul { display: flex; gap: var(--md); align-items: center; }
+nav > ul > li:nth-child(1) { list-style-type: none; }
 
 /* TYPOGRAPHY */
 
