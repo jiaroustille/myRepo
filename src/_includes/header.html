@@ -1,10 +1,18 @@
 <header>
-  <a href="/"><img href="{{ site.favicon }}" alt="Site Signature Icon"></a>
+  <a href="/" class="logoLink">
+    <img 
+    class="logoImg" 
+    src="{{ site.favicon }}" 
+    alt="Site Signature Icon"
+    width="48"
+    >
+  </a>
   <nav>
     <ul>
       <li><a href="/about">About</a></li>
       <li><a href="/diary/">Diary</a></li>
       <li><a href="/writings/">Writings</a></li>
     </ul>
+    {% include "themeSwitch.html" %}
   </nav>
 </header>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,22 +31,99 @@
 
 <link rel="alternate" type="application/rss+xml" href="/myRepo/rss.xml" title="example.com RSS Feed">
 
-<link rel="stylesheet" href="/myRepo/assets/styles/reset.css">
 <link rel="stylesheet" href="/myRepo/assets/styles/style.css">
 </head>
+
 <body>
   <header>
-  <a href="/myRepo/"><img href="/assets/img/favicon.png" alt="Site Signature Icon"></a>
+  <a href="/myRepo/" class="logoLink">
+    <img class="logoImg" src="/myRepo/assets/img/favicon.png" alt="Site Signature Icon" width="48">
+  </a>
   <nav>
     <ul>
       <li><a href="/myRepo/about">About</a></li>
       <li><a href="/myRepo/diary/">Diary</a></li>
       <li><a href="/myRepo/writings/">Writings</a></li>
     </ul>
+    <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
+
+<script>
+  /**
+  * Utility function to calculate the current theme setting.
+  * Look for a local storage value.
+  * Fall back to system setting.
+  * Fall back to light mode.
+  */
+  function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+    if (localStorageTheme !== null) {
+      return localStorageTheme;
+    }
+
+    if (systemSettingDark.matches) {
+      return "dark";
+    }
+
+    return "light";
+  }
+
+  /**
+  * Utility function to update the button text and aria-label.
+  */
+  function updateButton({ buttonEl, isDark }) {
+    const newCta = isDark ? "日" : "月";
+    // use an aria-label if you are omitting text on the button
+    // and using a sun/moon icon, for example
+    buttonEl.setAttribute("aria-label", newCta);
+    buttonEl.innerText = newCta;
+  }
+
+  /**
+  * Utility function to update the theme setting on the html tag
+  */
+  function updateThemeOnHtmlEl({ theme }) {
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }
+
+
+  /**
+  * On page load:
+  */
+
+  /**
+  * 1. Grab what we need from the DOM and system settings on page load
+  */
+  const button = document.querySelector("[data-theme-toggle]");
+  const localStorageTheme = localStorage.getItem("theme");
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  /**
+  * 2. Work out the current site settings
+  */
+  let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+
+  /**
+  * 3. Update the theme setting and button text accoridng to current settings
+  */
+  updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+  updateThemeOnHtmlEl({ theme: currentThemeSetting });
+
+  /**
+  * 4. Add an event listener to toggle the theme
+  */
+  button.addEventListener("click", (event) => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", newTheme);
+    updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+    updateThemeOnHtmlEl({ theme: newTheme });
+
+    currentThemeSetting = newTheme;
+  }); 
+</script>
   </nav>
 </header>
-  
   <main>
+    
     
 <ul>
   
@@ -56,8 +134,8 @@
   
 </ul>
 
+    
   </main>
-  
   <footer>
   <ul>
   <li><a href="/myRepo/about">Jia-Rou</a></li>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   {% include "head.html" %}
 </head>
+
 <body>
   {% include "header.html" %}
-  {% block content %}
   <main>
+    {% block content %}
     {{ content | safe }}
+    {% endblock %}
   </main>
-  {% endblock %}
   {% include "footer.html" %}
 </body>
 
