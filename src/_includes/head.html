@@ -15,6 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://{{ site.domain }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.domain }}">
+<meta property="og:image" content="{{ site.preview }}" />
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ title | deslugify }}">
@@ -26,3 +27,6 @@
 <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="{{ site.domain }} RSS Feed">
 
 <link rel="stylesheet" href="/assets/styles/style.css">
+<link rel="stylesheet" href="/assets/styles/prism.css">
+
+{% include "schema.html" %}

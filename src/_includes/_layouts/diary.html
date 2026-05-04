@@ -2,16 +2,18 @@
 
 {% block content %}
 <article>
-  
-  <section>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </section>
 
-  <section>
+  <header>
+    <h1>{{ title }}</h1>
+    <time>{{ content | readingTime }}</time>
+  </header>
+
+  {{ content | safe }}
+
+  <footer>
     {% include "tags.html" %}
-    {{ author }}
-  </section>
+    <p class="p-author">{{ author.name }}</p>
+  </footer>
 
 </article>
 {% endblock %}

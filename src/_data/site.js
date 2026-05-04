@@ -1,8 +1,9 @@
 export default {
   title: "My Site",
-  domain: "example.com",
+  domain: "jiaroustille.github.io",
   favicon: "/assets/img/favicon.png",
   preview: "/assets/img/preview.png",
+  language: "en",
   author: {
     name: "Jia-Rou",
     socials: [

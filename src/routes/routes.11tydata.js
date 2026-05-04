@@ -6,6 +6,7 @@ export default {
     layout: (data) => data.layout || "base.html",
     permalink: (data) => data.permalink || data.page.filePathStem + ".html" || "index.html",
     title: (data) => data.title || data.page.fileSlug || "index",
-    author: (data) => site.author
+    author: (data) => site.author,
+    type: (data) => data.type || "WebPage"
   }
 }

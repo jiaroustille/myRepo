@@ -3,19 +3,20 @@
 {% block content %}
 <article>
 
-  <section>
+  <header>
     <h1>{{ title }}</h1>
-    {% dateTime pub, upd %}
-  </section>
+    <div style="display: flex; gap: 1ch; align-items: flex-end;">
+      {% dateTime pub, upd %}
+      <time>{{ content | readingTime }}</time>
+    </div>
+  </header>
 
-  <section>
-    {{ content | safe }}
-  </section>
+  {{ content | safe }}
 
-  <section>
+  <footer>
     {% include "tags.html" %}
-    {{ author.name }}
-  </section>
-  
+    <p class="p-author">{{ author.name }}</p>
+  </footer>
+
 </article>
 {% endblock %}

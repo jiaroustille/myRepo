@@ -9,8 +9,10 @@ export default {
     if(pub && !upd) {return `<time date-time="${filters.toISOstring(pub)}">${filters.toPrettyString(pub)}</time>`}
     if(!pub && upd) {return `<time date-time="${filters.toISOstring(upd)}">${filters.toPrettyString(upd)}</time>`}
     if(pub && upd) {return `
+      <div>
       <del><time date-time="${filters.toISOstring(pub)}">${filters.toPrettyString(pub)}</time></del><br>
       <time date-time="${filters.toISOstring(upd)}">${filters.toPrettyString(upd)}</time>
+      </div>
     `}
   }
 }

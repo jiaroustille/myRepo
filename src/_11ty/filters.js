@@ -47,6 +47,38 @@ export default {
     const trimmed = short.trimEnd().replace(/\s+\S*$/, "")
 
     return trimmed + "…";
+  },
+
+  // messure
+  readingTime(str) {
+    if (!str) return "0 min read"
+    const clean = str.replace(/<[^>]*>/g, "").trim() // remove HTML
+    const hanMatches = clean.match(/[\u4E00-\u9FFF]/g) // chinese
+    const hanCount = hanMatches ? hanMatches.length : 0
+    const enWords = clean // abc
+      .replace(/[\u4E00-\u9FFF]/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean).length
+    const zhSpeed = 300
+    const enSpeed = 200
+    const zhMinutes = hanCount / zhSpeed
+    const enMinutes = enWords / enSpeed
+    const totalMinutes = Math.ceil(zhMinutes + enMinutes)
+    return `約${totalMinutes}分鐘`
+  },
+
+  wordCount(str) {
+    if (!str) return 0
+    const clean = str.replace(/<[^>]*>/g, "").trim()
+    const hanMatches = clean.match(/[\u4E00-\u9FFF]/g)
+    const hanCount = hanMatches ? hanMatches.length : 0
+    const enWords = clean
+      .replace(/[\u4E00-\u9FFF]/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean).length
+    return hanCount + enWords
   }
 
 }

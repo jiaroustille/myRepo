@@ -1,3 +1,7 @@
+---
+eleventyExcludeFromCollections: true
+---
+
 <nav style="margin: 1rem 0">
   <ul style="display: flex; gap: 2.5ch">
     <li><a href="#formatting">Formatting</a></li>

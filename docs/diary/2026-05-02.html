@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>2026 年 05 月 02 日 | My Site</title>
-<link rel="canonical" href="https://example.com/diary/2026-05-02.html">
+<link rel="canonical" href="https://jiaroustille.github.io/diary/2026-05-02.html">
 <meta name="description" content="Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…">
 
 <meta name="author" content="Jia-Rou">
@@ -19,8 +19,9 @@
 <meta property="og:title" content="2026 年 05 月 02 日">
 <meta property="og:description" content="Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/diary/2026-05-02.html">
-<meta property="og:site_name" content="example.com">
+<meta property="og:url" content="https://jiaroustille.github.io/diary/2026-05-02.html">
+<meta property="og:site_name" content="jiaroustille.github.io">
+<meta property="og:image" content="/assets/img/preview.png">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2026 年 05 月 02 日">
@@ -29,15 +30,72 @@
 <link rel="icon" href="/myRepo/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/myRepo/assets/img/favicon.png">
 
-<link rel="alternate" type="application/rss+xml" href="/myRepo/rss.xml" title="example.com RSS Feed">
+<link rel="alternate" type="application/rss+xml" href="/myRepo/rss.xml" title="jiaroustille.github.io RSS Feed">
 
 <link rel="stylesheet" href="/myRepo/assets/styles/style.css">
+<link rel="stylesheet" href="/myRepo/assets/styles/prism.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2026 年 05 月 02 日",
+  "url": "https://jiaroustille.github.io/diary/2026-05-02.html",
+  "description": "Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…",
+  "datePublished": "2026-05-02T00:00:00.000Z",
+  "dateModified": "2026-05-02T00:00:00.000Z",
+  "author": {
+    "@type": "Person",
+    "name": "Jia-Rou",
+    "url": "https://jiaroustille.github.io/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Site",
+    "url": "https://jiaroustille.github.io",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/assets/img/favicon.png"
+    }
+  },
+  "image": ["/assets/img/preview.png"],
+  "thumbnailUrl": "/assets/img/preview.png",
+  "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://jiaroustille.github.io/diary/2026-05-02.html"
+  },
+  
+  "wordCount": 235,
+  "inLanguage": "en"
+}
+</script>
 </head>
 
 <body>
   <header>
   <a href="/myRepo/" class="logoLink">
-    <img class="logoImg" src="/myRepo/assets/img/favicon.png" alt="Site Signature Icon" width="48">
+  <!--
+    <img 
+    class="logoImg" 
+    src="/assets/img/favicon.png" 
+    alt="Site Signature Icon"
+    width="48"
+    >
+  -->
+    <p class="logoImg" style="
+      font-size: 2.2rem;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 2px;
+      font-weight: 700;
+      font-family: fantasy;
+      overflow: hidden;
+      ">柔</p>
   </a>
   <nav>
     <ul>
@@ -125,69 +183,66 @@
   <main>
     
 <article>
-  
-  <section>
+
+  <header>
     <h1 id="2026-05-02">2026 年 05 月 02 日</h1>
-    <p>Today I made some filters that may or may not come into use sometime. I find the <code>.eleventy.js</code> to get cluttered
+    <time>約2分鐘</time>
+  </header>
+
+  <p>Today I made some filters that may or may not come into use sometime. I find the <code>.eleventy.js</code> to get cluttered
 very easily so I am practicing splitting it up into multiple files such as <code>_11ty/</code>. The filters seem to be the
 easiest for me to understand and make, shortcodes and collections are still a bit out of reach. Though, I'll be
 reading the docs and learning as I go.</p>
 <h2 id="casing">Casing</h2>
-<pre><code class="language-js">toUpperCase(str) { return str.toUpperCase() },
-toLowerCase(str) { return str.toLowerCase() },
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 <p>These do exactly what you'd expect them to, and I haven't even used them yet...</p>
 <h2 id="deslugify">Deslugify</h2>
-<pre><code class="language-js">export default {
-  deslugify(str) {
-    return str
-      .replace(/[-_]+/g, &quot; &quot;) // replace fake spaces
-      .replace(/\b\w/g, c =&gt; c.toUpperCase()) // upper case on new words
-  }
-}
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">deslugify</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> str
+      <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[-_]+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span> <span class="token comment">// replace fake spaces</span>
+      <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\b\w</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token parameter">c</span> <span class="token operator">=></span> c<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// upper case on new words</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="date">Date</h2>
 <p>I use a helper function that is not exported to the <code>.eleventy.js</code>.</p>
-<pre><code class="language-js">function safeDate(input) {
-  const d = new Date(input)
-  return isNaN(d) ? null : d
-}
-</code></pre>
-<pre><code class="language-js">export default {
-  toISOstring(inp) {
-    const date = safeDate(inp) // validate
-    return date ? date.toISOString() : &quot;&quot;
-  }
-}
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">safeDate</span><span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> d
+<span class="token punctuation">}</span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">toISOstring</span><span class="token punctuation">(</span><span class="token parameter">inp</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token function">safeDate</span><span class="token punctuation">(</span>inp<span class="token punctuation">)</span> <span class="token comment">// validate</span>
+    <span class="token keyword">return</span> date <span class="token operator">?</span> date<span class="token punctuation">.</span><span class="token function">toISOString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">""</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="description">Description</h2>
-<pre><code class="language-js">export default {
-  genDescription(str) {
-    if (!str) return &quot;&quot;;
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">genDescription</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>str<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
 
-    let clean = str.replace(/&lt;[^&gt;]*&gt;/g, &quot;&quot;) // html
-    clean = clean.replace(/^#{1,6}\s*/gm, &quot;&quot;) // headings
-    clean = clean.replace(/^&gt;\s*/gm, &quot;&quot;) // block quotes
-    clean = clean.replace(/^\s*[-*+]\s+/gm, &quot;&quot;) // lists
-    clean = clean.replace(/\s+/g, &quot; &quot;).trim() // whitespace
+    <span class="token keyword">let</span> clean <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&lt;[^>]*></span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// html</span>
+    clean <span class="token operator">=</span> clean<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^#{1,6}\s*</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gm</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// headings</span>
+    clean <span class="token operator">=</span> clean<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^>\s*</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gm</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// block quotes</span>
+    clean <span class="token operator">=</span> clean<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\s*[-*+]\s+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gm</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// lists</span>
+    clean <span class="token operator">=</span> clean<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// whitespace</span>
 
-    if (clean.length &lt;= 120) return clean
-    const short = clean.slice(0, 120)
-    const trimmed = short.trimEnd().replace(/\s+\S*$/, &quot;&quot;)
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>clean<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">120</span><span class="token punctuation">)</span> <span class="token keyword">return</span> clean
+    <span class="token keyword">const</span> short <span class="token operator">=</span> clean<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> trimmed <span class="token operator">=</span> short<span class="token punctuation">.</span><span class="token function">trimEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s+\S*$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span>
 
-    return trimmed + &quot;…&quot;;
-  }
-}
-</code></pre>
+    <span class="token keyword">return</span> trimmed <span class="token operator">+</span> <span class="token string">"…"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 
-  </section>
 
-  <section>
+  <footer>
     <ul>
   
 </ul>
-    Jia-Rou
-  </section>
+    <p class="p-author">Jia-Rou</p>
+  </footer>
 
 </article>
 

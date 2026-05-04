@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xml:base=""
+     xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>My Site</title>
+    <link>https://jiaroustille.github.io</link>
+    <atom:link href="https://jiaroustille.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en</language>
+    <item>
+      <title>BTS And Music</title>
+
+      <link>https://jiaroustille.github.io/writings/bts-and-music.html</link>
+
+      <description>
+        Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…
+      </description>
+
+      <pubDate>
+        2026-05-02T17:21:24.827Z
+      </pubDate>
+
+      <dc:creator>Jia-Rou</dc:creator>
+
+      <guid>https://jiaroustille.github.io/writings/bts-and-music.html</guid>
+    </item>
+    <item>
+      <title>How To Write</title>
+
+      <link>https://jiaroustille.github.io/writings/how-to-write.html</link>
+
+      <description>
+        Starting off with making it clear that I am not an expert, I didn&#39;t even finish school. I however do love writing and…
+      </description>
+
+      <pubDate>
+        2026-05-02T16:21:25.072Z
+      </pubDate>
+
+      <dc:creator>Jia-Rou</dc:creator>
+
+      <guid>https://jiaroustille.github.io/writings/how-to-write.html</guid>
+    </item>
+  </channel>
+</rss>

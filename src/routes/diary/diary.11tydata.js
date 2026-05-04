@@ -7,6 +7,7 @@ export default {
     permalink: (data) => data.permalink || data.page.filePathStem + ".html" || "index.html",
     date: (data) => data.date || data.page.fileSlug,
     title: (data) => data.title || filters.toPrettyString(data.date), 
-    author: (data) => site.author.name
+    author: (data) => site.author,
+    type: (data) => data.type || "BlogPosting"
   },
 }
