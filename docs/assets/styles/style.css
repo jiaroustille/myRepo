@@ -140,6 +140,9 @@ del::before {
   opacity: 0.6;
 }
 
+.imageContainer { padding: var(--sm); width: fit-content; float: right;}
+.image { display: block; }
+
 /* INDIVIDUAL */
 
 .themeSwitch {

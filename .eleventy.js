@@ -3,16 +3,13 @@ import collections from "./src/_11ty/collections.js"
 import shortcodes from "./src/_11ty/shortcodes.js"
 import { HtmlBasePlugin } from "@11ty/eleventy"
 import { IdAttributePlugin } from "@11ty/eleventy"
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
 import markdownIt from "markdown-it"
+import options from "./src/_data/options.js"
 
 export default function (eleventyConfig) {
-	let options = {
-		html: true,
-		breaks: true,
-		linkify: true,
-	}
-  eleventyConfig.setLibrary("md", markdownIt(options))
+  eleventyConfig.setLibrary("md", markdownIt(options.markdownIt))
 
   Object.keys(filters).forEach((name) => { eleventyConfig.addFilter(name, filters[name]) })
   Object.keys(collections).forEach((name) => { eleventyConfig.addCollection(name, collections[name]) })
@@ -24,6 +21,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(HtmlBasePlugin)
   eleventyConfig.addPlugin(IdAttributePlugin)
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, options.eleventyImageTransformPlugin)
   eleventyConfig.addPlugin(syntaxHighlight)
   
   eleventyConfig.addPassthroughCopy("./src/routes/assets/")

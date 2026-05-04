@@ -30,5 +30,13 @@ export default {
         ${next ? `<a class="u-url" href="${next.url}">&gt;&gt;</a>` : "<span style='opacity: 0.3'>&gt;&gt;</span>"}
       </nav>
     `;
+  },
+
+  image(src, alt, width, height, float, style) {
+    const w = width || "auto"
+    const h = height || "auto"
+    const f = float || "right"
+    const s = style || ""
+    return `<div class="imageContainer"><img src="${src}" alt="${alt}" width="${w}" height="${h}" style='float: ${f}; ${s}' class="image"></div><br>`
   }
 }
