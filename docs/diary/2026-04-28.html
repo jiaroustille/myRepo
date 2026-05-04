@@ -76,13 +76,14 @@
 
 <body>
   <header>
-  <a href="/myRepo/" class="logoLink">
+  <a href="/myRepo/" class="logoLink" style="border: none;">
   <!--
     <img 
     class="logoImg" 
     src="/assets/img/favicon.png" 
     alt="Site Signature Icon"
     width="48"
+    style="border: 1px solid var(--clr-foreground);"
     >
   -->
     <p class="logoImg" style="
@@ -98,6 +99,7 @@
       font-weight: 700;
       font-family: fantasy;
       overflow: hidden;
+      border: 1px solid var(--clr-foreground)
       ">柔</p>
   </a>
   <nav class="h-nav">
@@ -106,7 +108,10 @@
       <li><a class="u-url" href="/myRepo/diary/">Diary</a></li>
       <li><a class="u-url" href="/myRepo/writings/">Writings</a></li>
     </ul>
-    <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
+    <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme" style="
+    font-size: var(--md);
+    border: none;
+    cursor: pointer;">日</button>
 
 <script>
   /**
@@ -193,7 +198,12 @@
   </header>
 
   <p>The day has just begun but I'll still get started on documenting. I've added proper Licensing, how cool is that!? Okay, maybe not THAT cool but like it makes the whole thing feel much more proper. I've also set up a proper .github/workflows/deploy.yml that hopefully doesn't corrupt my .git/ folder again. I tried using AI to proof read my project but it didn't quite get it right... However, it was very useful for debugging my error messages that are way too long to decode myself! Now I know that getting a corrupted .git/ is easily fixed by recreating the folder, git clone &lt;repository&gt;, and git push -u origin main.</p>
-<div class="imageContainer"><picture><source type="image/webp" srcset="/myRepo/.11ty/image/?src=src%5Croutes%5Cassets%5Cimg%5Cpreview.png&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/myRepo/.11ty/image/?src=src%5Croutes%5Cassets%5Cimg%5Cpreview.png&width=300&format=jpeg&via=transform" alt="screenshot mentioned in text above, one side is light and the other is dark." width="300" height="151" style="float: right; " class="image"></picture></div><br>
+<p></p><div style="padding: var(--sm); 
+      width: fit-content; 
+      float: right;"><br>
+<picture><source type="image/webp" srcset="/myRepo/.11ty/image/?src=src%5Croutes%5Cassets%5Cimg%5Cpreview.png&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/myRepo/.11ty/image/?src=src%5Croutes%5Cassets%5Cimg%5Cpreview.png&width=300&format=jpeg&via=transform" alt="screenshot mentioned in text above, one side is light and the other is dark." width="300" height="151" style="display: block;"></picture><br>
+</div><br>
+<br><p></p>
 <p>I've also created a <a href="https://github.com/jiaroustille/jiaroustille.github.io/blob/main/README.md">README.md</a> for my Github repo and added a cool screenshot of darkmode vs lightmode! Developers who are peaking at my code will also know the hidden message that I added in the source code. Next up on the TODO list is likely to fix the &quot;You may also enjoy&quot; recomendations. They are not supposed to be able to recomend the currently reading article.</p>
 
 
@@ -205,7 +215,7 @@
     
       <nav class="recommended">
         <span style="opacity: 0.3">&lt;&lt;</span>
-        <a class="u-url" href="/myRepo/diary/2026-05-03.html">You may also enjoy: 2026 年 05 月 03 日</a>
+        <a class="u-url" href="/myRepo/diary/2026-05-01.html">You may also enjoy: 2026 年 05 月 01 日</a>
         <a class="u-url" href="/myRepo/diary/2026-04-30.html">&gt;&gt;</a>
       </nav>
     

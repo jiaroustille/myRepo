@@ -76,13 +76,14 @@
 
 <body>
   <header>
-  <a href="/myRepo/" class="logoLink">
+  <a href="/myRepo/" class="logoLink" style="border: none;">
   <!--
     <img 
     class="logoImg" 
     src="/assets/img/favicon.png" 
     alt="Site Signature Icon"
     width="48"
+    style="border: 1px solid var(--clr-foreground);"
     >
   -->
     <p class="logoImg" style="
@@ -98,6 +99,7 @@
       font-weight: 700;
       font-family: fantasy;
       overflow: hidden;
+      border: 1px solid var(--clr-foreground)
       ">柔</p>
   </a>
   <nav class="h-nav">
@@ -106,7 +108,10 @@
       <li><a class="u-url" href="/myRepo/diary/">Diary</a></li>
       <li><a class="u-url" href="/myRepo/writings/">Writings</a></li>
     </ul>
-    <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
+    <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme" style="
+    font-size: var(--md);
+    border: none;
+    cursor: pointer;">日</button>
 
 <script>
   /**
@@ -248,7 +253,7 @@ reading the docs and learning as I go.</p>
     
       <nav class="recommended">
         <a class="u-url" href="/myRepo/diary/2026-05-01.html">&lt;&lt;</a>
-        <a class="u-url" href="/myRepo/diary/2026-04-30.html">You may also enjoy: 2026 年 04 月 30 日</a>
+        <a class="u-url" href="/myRepo/diary/2026-04-28.html">You may also enjoy: 2026 年 04 月 28 日</a>
         <a class="u-url" href="/myRepo/diary/2026-05-03.html">&gt;&gt;</a>
       </nav>
     

@@ -12,3 +12,15 @@ blockquote {
   font-style: oblique;
   border-left: 3px solid var(--clr-secondary);
 }
+
+del { position: relative; color: var(--clr-foreground); }
+del::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(-20deg,
+      var(--clr-background) 0 8px,
+      transparent 8px 12px);
+  opacity: 0.6;
+}

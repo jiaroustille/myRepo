@@ -32,11 +32,24 @@ export default {
     `;
   },
 
-  image(src, alt, width, height, float, style) {
+  image(src, alt, width, height, float) {
     const w = width || "auto"
     const h = height || "auto"
     const f = float || "right"
-    const s = style || ""
-    return `<div class="imageContainer"><img src="${src}" alt="${alt}" width="${w}" height="${h}" style='float: ${f}; ${s}' class="image"></div><br>`
+    return `
+    <div 
+      style='padding: var(--sm); 
+      width: fit-content; 
+      float: ${f};'
+    >
+      <img 
+      src="${src}" 
+      alt="${alt}" 
+      width="${w}" 
+      height="${h}" 
+      style='display: block;' 
+    >
+    </div>
+    <br>`
   }
 }
