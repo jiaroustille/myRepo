@@ -97,11 +97,11 @@
       overflow: hidden;
       ">柔</p>
   </a>
-  <nav>
+  <nav class="h-nav">
     <ul>
-      <li><a href="/myRepo/about">About</a></li>
-      <li><a href="/myRepo/diary/">Diary</a></li>
-      <li><a href="/myRepo/writings/">Writings</a></li>
+      <li><a class="u-url" href="/myRepo/about">About</a></li>
+      <li><a class="u-url" href="/myRepo/diary/">Diary</a></li>
+      <li><a class="u-url" href="/myRepo/writings/">Writings</a></li>
     </ul>
     <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
 
@@ -188,15 +188,15 @@
 
 <ul class="h-feed">
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/writings/bts-and-music.html"><h2 id="bts-and-music">BTS And Music</h2></a>
+      <a class="u-url" href="/myRepo/writings/bts-and-music.html"><h2 class="p-name" id="bts-and-music">BTS And Music</h2></a>
 
       
     </header>
 
     
-      <p>Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
+      <p class="p-summary">Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
     
   </li>
   
@@ -204,15 +204,15 @@
 
     
   </main>
-  <footer>
+  <footer class="h-card">
   <ul>
-    <li><a href="/myRepo/about">Jia-Rou</a></li>
+    <li><a class="u-url p-name u-uid" href="/myRepo/about">Jia-Rou</a></li>
     
     <li><a rel="me" href="https://github.com/jiaroustille">GitHub</a></li>
     
     <li><a rel="me" href="https://bsky.app/profile/jiaroustille.bsky.social">BlueSky</a></li>
     
-    <li><a href="/myRepo/rss.xml">RSS</a></li>
+    <li><a class="u-url" rel="feed" href="/myRepo/rss.xml">RSS</a></li>
   </ul>
 </footer>
 </body>

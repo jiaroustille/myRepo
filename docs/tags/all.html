@@ -97,11 +97,11 @@
       overflow: hidden;
       ">柔</p>
   </a>
-  <nav>
+  <nav class="h-nav">
     <ul>
-      <li><a href="/myRepo/about">About</a></li>
-      <li><a href="/myRepo/diary/">Diary</a></li>
-      <li><a href="/myRepo/writings/">Writings</a></li>
+      <li><a class="u-url" href="/myRepo/about">About</a></li>
+      <li><a class="u-url" href="/myRepo/diary/">Diary</a></li>
+      <li><a class="u-url" href="/myRepo/writings/">Writings</a></li>
     </ul>
     <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
 
@@ -188,159 +188,159 @@
 
 <ul class="h-feed">
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-02.html"><h2 id="2026-05-02">2026 年 05 月 02 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-02.html"><h2 class="p-name" id="2026-05-02">2026 年 05 月 02 日</h2></a>
 
       
     </header>
 
     
-      <p>Today I made some filters that may or may not come into use sometime. I find the `.eleventy.js` to get cluttered very…</p>
+      <p class="p-summary">Today I made some filters that may or may not come into use sometime. I find the `.eleventy.js` to get cluttered very…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/about.html"><h2 id="about">About</h2></a>
+      <a class="u-url" href="/myRepo/about.html"><h2 class="p-name" id="about">About</h2></a>
 
       
     </header>
 
     
-      <p>About Hi, my name is Jia-Rou and I like to create things. Hence why I made this site, to show off my works and not…</p>
+      <p class="p-summary">About Hi, my name is Jia-Rou and I like to create things. Hence why I made this site, to show off my works and not…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/writings/how-to-write.html"><h2 id="how-to-write">How To Write</h2></a>
+      <a class="u-url" href="/myRepo/writings/how-to-write.html"><h2 class="p-name" id="how-to-write">How To Write</h2></a>
 
       
     </header>
 
     
-      <p>Starting off with making it clear that I am not an expert, I didn&#39;t even finish school. I however do love writing and…</p>
+      <p class="p-summary">Starting off with making it clear that I am not an expert, I didn&#39;t even finish school. I however do love writing and…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/writings/bts-and-music.html"><h2 id="bts-and-music">BTS And Music</h2></a>
+      <a class="u-url" href="/myRepo/writings/bts-and-music.html"><h2 class="p-name" id="bts-and-music">BTS And Music</h2></a>
 
       
     </header>
 
     
-      <p>Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
+      <p class="p-summary">Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-03.html"><h2 id="2026-05-03">2026 年 05 月 03 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-03.html"><h2 class="p-name" id="2026-05-03">2026 年 05 月 03 日</h2></a>
 
       
     </header>
 
     
-      <p>Today I fell down the CSS rabbithole and have not yet gotten up. I also made [this](/writings/testing)!</p>
+      <p class="p-summary">Today I fell down the CSS rabbithole and have not yet gotten up. I also made [this](/writings/testing)!</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-04.html"><h2 id="2026-05-04">2026 年 05 月 04 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-04.html"><h2 class="p-name" id="2026-05-04">2026 年 05 月 04 日</h2></a>
 
       
     </header>
 
     
-      <p>I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
+      <p class="p-summary">I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/music.html"><h2 id="music">Music</h2></a>
+      <a class="u-url" href="/myRepo/tags/music.html"><h2 class="p-name" id="music">Music</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/bts.html"><h2 id="bts">Bts</h2></a>
+      <a class="u-url" href="/myRepo/tags/bts.html"><h2 class="p-name" id="bts">Bts</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/writing.html"><h2 id="writing">Writing</h2></a>
+      <a class="u-url" href="/myRepo/tags/writing.html"><h2 class="p-name" id="writing">Writing</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/guide.html"><h2 id="guide">Guide</h2></a>
+      <a class="u-url" href="/myRepo/tags/guide.html"><h2 class="p-name" id="guide">Guide</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/diary.html"><h2 id="diary">Diary</h2></a>
+      <a class="u-url" href="/myRepo/tags/diary.html"><h2 class="p-name" id="diary">Diary</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/writings.html"><h2 id="writings">Writings</h2></a>
+      <a class="u-url" href="/myRepo/tags/writings.html"><h2 class="p-name" id="writings">Writings</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/tags/all.html"><h2 id="all-2">All</h2></a>
+      <a class="u-url" href="/myRepo/tags/all.html"><h2 class="p-name" id="all-2">All</h2></a>
 
       
     </header>
 
     
-      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+      <p class="p-summary">{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
     
   </li>
   
@@ -348,15 +348,15 @@
 
     
   </main>
-  <footer>
+  <footer class="h-card">
   <ul>
-    <li><a href="/myRepo/about">Jia-Rou</a></li>
+    <li><a class="u-url p-name u-uid" href="/myRepo/about">Jia-Rou</a></li>
     
     <li><a rel="me" href="https://github.com/jiaroustille">GitHub</a></li>
     
     <li><a rel="me" href="https://bsky.app/profile/jiaroustille.bsky.social">BlueSky</a></li>
     
-    <li><a href="/myRepo/rss.xml">RSS</a></li>
+    <li><a class="u-url" rel="feed" href="/myRepo/rss.xml">RSS</a></li>
   </ul>
 </footer>
 </body>

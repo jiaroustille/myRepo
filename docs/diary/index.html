@@ -97,11 +97,11 @@
       overflow: hidden;
       ">柔</p>
   </a>
-  <nav>
+  <nav class="h-nav">
     <ul>
-      <li><a href="/myRepo/about">About</a></li>
-      <li><a href="/myRepo/diary/">Diary</a></li>
-      <li><a href="/myRepo/writings/">Writings</a></li>
+      <li><a class="u-url" href="/myRepo/about">About</a></li>
+      <li><a class="u-url" href="/myRepo/diary/">Diary</a></li>
+      <li><a class="u-url" href="/myRepo/writings/">Writings</a></li>
     </ul>
     <button class="themeSwitch" type="button" data-theme-toggle="" aria-label="Change to light theme">日</button>
 
@@ -188,39 +188,39 @@
 
 <ul class="h-feed">
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-04.html"><h2 id="2026-05-04">2026 年 05 月 04 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-04.html"><h2 class="p-name" id="2026-05-04">2026 年 05 月 04 日</h2></a>
 
       
     </header>
 
     
-      <p>I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
+      <p class="p-summary">I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-03.html"><h2 id="2026-05-03">2026 年 05 月 03 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-03.html"><h2 class="p-name" id="2026-05-03">2026 年 05 月 03 日</h2></a>
 
       
     </header>
 
     
-      <p>Today I fell down the CSS rabbithole and have not yet gotten up. I also made this!</p>
+      <p class="p-summary">Today I fell down the CSS rabbithole and have not yet gotten up. I also made this!</p>
     
   </li>
   
-  <li>
+  <li class="h-entry">
     <header style="display: flex; align-items: baseline; gap: 1ch;">
-      <a href="/myRepo/diary/2026-05-02.html"><h2 id="2026-05-02">2026 年 05 月 02 日</h2></a>
+      <a class="u-url" href="/myRepo/diary/2026-05-02.html"><h2 class="p-name" id="2026-05-02">2026 年 05 月 02 日</h2></a>
 
       
     </header>
 
     
-      <p>Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…</p>
+      <p class="p-summary">Today I made some filters that may or may not come into use sometime. I find the .eleventy.js to get cluttered very…</p>
     
   </li>
   
@@ -228,15 +228,15 @@
 
     
   </main>
-  <footer>
+  <footer class="h-card">
   <ul>
-    <li><a href="/myRepo/about">Jia-Rou</a></li>
+    <li><a class="u-url p-name u-uid" href="/myRepo/about">Jia-Rou</a></li>
     
     <li><a rel="me" href="https://github.com/jiaroustille">GitHub</a></li>
     
     <li><a rel="me" href="https://bsky.app/profile/jiaroustille.bsky.social">BlueSky</a></li>
     
-    <li><a href="/myRepo/rss.xml">RSS</a></li>
+    <li><a class="u-url" rel="feed" href="/myRepo/rss.xml">RSS</a></li>
   </ul>
 </footer>
 </body>
