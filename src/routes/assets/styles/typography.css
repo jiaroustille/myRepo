@@ -1,0 +1,14 @@
+a { text-decoration: none; }
+body > main > article > * > a { border-bottom: 2px solid var(--clr-secondary); }
+
+h2, h1 { margin-top: var(--lg); }
+h3 { margin-top: var(--md); }
+
+body > main > article > * > li { margin-left: var(--xs); }
+
+blockquote {
+  padding-left: var(--md);
+  margin: var(--md) 0;
+  font-style: oblique;
+  border-left: 3px solid var(--clr-secondary);
+}
