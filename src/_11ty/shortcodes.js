@@ -14,5 +14,21 @@ export default {
       <time class="dt-updated" datetime="${filters.toISOstring(upd)}">${filters.toPrettyString(upd)}</time>
       </div>
     `}
+  },
+
+  recommended(col, page, collections) {
+    const items = collections[col];
+    const index = items.findIndex(i => i.url === page.url);
+    const prev = items[index - 1];
+    const next = items[index + 1];
+    const others = items.filter(i => i.url !== page.url);
+    const random = others[Math.floor(Math.random() * others.length)];
+    return `
+      <nav class="recommended">
+        ${prev ? `<a class="u-url" href="${prev.url}">&lt;&lt;</a>` : "<span style='opacity: 0.3'>&lt;&lt;</span>"}
+        ${random ? `<a class="u-url" href="${random.url}">You may also enjoy: ${random.data.title}</a>` : ""}
+        ${next ? `<a class="u-url" href="${next.url}">&gt;&gt;</a>` : "<span style='opacity: 0.3'>&gt;&gt;</span>"}
+      </nav>
+    `;
   }
 }
