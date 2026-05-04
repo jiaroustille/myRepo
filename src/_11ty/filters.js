@@ -82,7 +82,7 @@ export default {
   },
 
   // maths
-  setLimit(arr, int) { return arr.slice(0, limit) },
+  setLimit(arr, int) { return arr.slice(0, int) },
   getRandom(arr) {
     const out = arr.sort(() => { return 0.5 - Math.random() }) 
     return arr.slice(0, 1)

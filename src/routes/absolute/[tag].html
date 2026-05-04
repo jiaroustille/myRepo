@@ -12,11 +12,5 @@ eleventyComputed:
 ---
 
 <h1>#{{ title }}</h1>
-<ul class="h-feed">
-  {% for i in collections[tag] %}
-  <li>
-    <a href="{{ i.url }}"><h2>{{ i.data.title }}</h2></a>
-    <p>{{ i.rawInput | genDescription }}</p>
-  </li>
-  {% endfor %}
-</ul>
+{% from "hfeed.njk" import hfeed %}
+{{ hfeed(collections[tag], false, true) }}

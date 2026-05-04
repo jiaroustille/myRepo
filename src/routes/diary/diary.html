@@ -8,11 +8,5 @@ eleventyComputed:
 ---
 
 <h1>{{ title }}</h1>
-<ul class="h-feed">
-  {% for i in collections[col] | reverse %}
-  <li>
-    <a href="{{ i.url }}"><h2>{{ i.data.title }}</h2></a>
-    <p>{{ i.content | genDescription }}</p>
-  </li>
-  {% endfor %}
-</ul>
+{% from "hfeed.njk" import hfeed %}
+{{ hfeed(collections[col] | reverse) }}

@@ -83,7 +83,7 @@ body {
 
 body > main { grid-area: main; }
 body > header { grid-area: header; display: flex; align-items: center; justify-content: space-between; margin-top: var(--xs); }
-body > footer { grid-area: footer; display: flex; align-items: center; justify-content: center; margin-top: var(--xxl); }
+body > footer { grid-area: footer; display: flex; align-items: center; justify-content: center; padding-bottom: var(--xs); }
 
 body > header > nav > ul { display: flex; gap: var(--md); align-items: center; }
 body > header > nav { display: flex; gap: var(--xxs); align-items: center; } 
@@ -151,4 +151,4 @@ del::before {
 .logoLink { border: none; }
 .logoImg { border: 1px solid var(--clr-foreground); }
 
-body > main > article > footer > nav { display: flex; justify-content: space-between; }
+body > main > article > footer > nav { display: flex; justify-content: space-between; padding: var(--md) 0 }

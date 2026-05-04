@@ -65,7 +65,7 @@
   "@id": "https://jiaroustille.github.io/tags/all.html"
   },
   
-  "wordCount": 302,
+  "wordCount": 260,
   "inLanguage": "en"
 }
 </script>
@@ -184,71 +184,164 @@
     
     
 <h1 id="all">#all</h1>
+
+
 <ul class="h-feed">
   
   <li>
-    <a href="/myRepo/diary/2026-05-02.html"><h2 id="2026-05-02">2026 年 05 月 02 日</h2></a>
-    <p>Today I made some filters that may or may not come into use sometime. I find the `.eleventy.js` to get cluttered very…</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/diary/2026-05-02.html"><h2 id="2026-05-02">2026 年 05 月 02 日</h2></a>
+
+      
+    </header>
+
+    
+      <p>Today I made some filters that may or may not come into use sometime. I find the `.eleventy.js` to get cluttered very…</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/about.html"><h2 id="about">about</h2></a>
-    <p>About Hi, my name is Jia-Rou and I like to create things. Hence why I made this site, to show off my works and not…</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/about.html"><h2 id="about">About</h2></a>
+
+      
+    </header>
+
+    
+      <p>About Hi, my name is Jia-Rou and I like to create things. Hence why I made this site, to show off my works and not…</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/writings/how-to-write.html"><h2 id="how-to-write">How To Write</h2></a>
-    <p>Starting off with making it clear that I am not an expert, I didn&#39;t even finish school. I however do love writing and…</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/writings/how-to-write.html"><h2 id="how-to-write">How To Write</h2></a>
+
+      
+    </header>
+
+    
+      <p>Starting off with making it clear that I am not an expert, I didn&#39;t even finish school. I however do love writing and…</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/writings/bts-and-music.html"><h2 id="bts-and-music">BTS And Music</h2></a>
-    <p>Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/writings/bts-and-music.html"><h2 id="bts-and-music">BTS And Music</h2></a>
+
+      
+    </header>
+
+    
+      <p>Interlude: What Are You Doing Now? Sometimes the simplest questions are the ones that shake you the most. What are you…</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/diary/2026-05-03.html"><h2 id="2026-05-03">2026 年 05 月 03 日</h2></a>
-    <p>Today I fell down the CSS rabbithole and have not yet gotten up. I also made [this](/writings/testing)!</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/diary/2026-05-03.html"><h2 id="2026-05-03">2026 年 05 月 03 日</h2></a>
+
+      
+    </header>
+
+    
+      <p>Today I fell down the CSS rabbithole and have not yet gotten up. I also made [this](/writings/testing)!</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/diary/2026-05-04.html"><h2 id="2026-05-04">2026 年 05 月 04 日</h2></a>
-    <p>I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/diary/2026-05-04.html"><h2 id="2026-05-04">2026 年 05 月 04 日</h2></a>
+
+      
+    </header>
+
+    
+      <p>I think I&#39;ll participate in another Go tournament, so am looking forward lots! Time to get back to the Fox Server…</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/music.html"><h2 id="music">music</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/music.html"><h2 id="music">Music</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/bts.html"><h2 id="bts">bts</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/bts.html"><h2 id="bts">Bts</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/writing.html"><h2 id="writing">writing</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/writing.html"><h2 id="writing">Writing</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/guide.html"><h2 id="guide">guide</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/guide.html"><h2 id="guide">Guide</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/diary.html"><h2 id="diary">diary</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/diary.html"><h2 id="diary">Diary</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/writings.html"><h2 id="writings">writings</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/writings.html"><h2 id="writings">Writings</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
   <li>
-    <a href="/myRepo/tags/all.html"><h2 id="all-2">all</h2></a>
-    <p>{{ title }} {% for i in collections[tag] %} {{ i.data.title }} {{ i.rawInput | genDescription }} {% endfor %}</p>
+    <header style="display: flex; align-items: baseline; gap: 1ch;">
+      <a href="/myRepo/tags/all.html"><h2 id="all-2">All</h2></a>
+
+      
+    </header>
+
+    
+      <p>{{ title }} {% from &quot;hfeed.njk&quot; import hfeed %} {{ hfeed(collections[tag], false, true) }}</p>
+    
   </li>
   
 </ul>

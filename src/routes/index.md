@@ -4,8 +4,6 @@ type: WebSite
 eleventyComputed:
   eleventyExcludeFromCollections: true
 ---
-{{ title | toUpperCase }}
-{{ title | toLowerCase }}
-{{ title | deslugify }}
 
-{% hello "Eleventy", "^u^" %}
+{% from "hfeed.njk" import hfeed %}
+{{ hfeed(collections.all | setLimit(3) | reverse, true) }}
