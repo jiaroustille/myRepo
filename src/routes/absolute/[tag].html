@@ -5,9 +5,18 @@ pagination:
   alias: tag
   addAllPagesToCollections: true
 layout: base.html
-permalink: "/tags/{{ tag }}.html"
+permalink: "/tags/{{ tag | slugify }}.html"
 eleventyComputed:
-  title: "{{ tag }}"
+  title: "{{ tag | slugify }}"
+  eleventyExcludeFromCollections: true
 ---
 
-TODO!
+<h1>#{{ title }}</h1>
+<ul class="h-feed">
+  {% for i in collections[tag] %}
+  <li>
+    <a href="{{ i.url }}"><h2>{{ i.data.title }}</h2></a>
+    <p>{{ i.rawInput | genDescription }}</p>
+  </li>
+  {% endfor %}
+</ul>

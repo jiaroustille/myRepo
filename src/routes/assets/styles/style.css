@@ -94,12 +94,13 @@ nav > ul > li:nth-child(1) { list-style-type: none; }
 
 body > main > article > header { margin-bottom: var(--lg); }
 body > main > article > footer { margin-top: var(--lg); }
-body > main > h2, h1 { margin-top: var(--lg); }
 body > main > article > footer > ul { list-style: none; display: flex; gap: 1ch;}
 body > main > article > footer > ul > li::before { content: "#" }
 body > main > article > footer > .p-author { margin-top: var(--md); }
 body > main > article > footer > .p-author::before { content: "//"; }
 
+body > main > ul.h-feed { margin: auto; }
+body > main > ul.h-feed > li { padding-bottom: var(--xxl); border-bottom: 1px solid var(--clr-accent); }
 body > main > ul { 
   list-style: none; 
   display: flex;
@@ -107,33 +108,26 @@ body > main > ul {
   gap: var(--md);
 }
 
-body > main > ul.h-feed { margin: var(--lg) auto; }
-
-body > main > ul.h-feed > li { 
-  padding: 0 var(--xxl);
-  padding-bottom: var(--md);
-  border-bottom: 1px solid var(--clr-accent);
-}
-
 /* TYPOGRAPHY */
 
 a { text-decoration: none; }
 body > main > article > * > a { border-bottom: 4px solid var(--clr-secondary); }
+
+h2, h1 { margin-top: var(--lg); }
+h3 { margin-top: var(--md); }
+
+body > main > article > * > li { margin-left: var(--xs); }
+
 blockquote {
-  text-indent: var(--md);
+  padding-left: var(--md);
   margin: var(--md) 0;
   font-style: oblique;
   border-left: 3px solid var(--clr-accent);
 }
-body > main > article > * > li { margin-left: var(--xs); }
 
 /* BLOCKS */
 
-del {
-  position: relative;
-  color: var(--clr-foreground);
-}
-
+del { position: relative; color: var(--clr-foreground); }
 del::before {
   content: "";
   position: absolute;
