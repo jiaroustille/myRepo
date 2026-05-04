@@ -4,8 +4,16 @@ import shortcodes from "./src/_11ty/shortcodes.js"
 import { HtmlBasePlugin } from "@11ty/eleventy"
 import { IdAttributePlugin } from "@11ty/eleventy"
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
+import markdownIt from "markdown-it"
 
 export default function (eleventyConfig) {
+	let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+	}
+  eleventyConfig.setLibrary("md", markdownIt(options))
+
   Object.keys(filters).forEach((name) => { eleventyConfig.addFilter(name, filters[name]) })
   Object.keys(collections).forEach((name) => { eleventyConfig.addCollection(name, collections[name]) })
   Object.keys(shortcodes).forEach((name) => {

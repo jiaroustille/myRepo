@@ -79,6 +79,22 @@ export default {
       .split(/\s+/)
       .filter(Boolean).length
     return hanCount + enWords
-  }
+  },
+
+  // maths
+  setLimit(arr, int) { return arr.slice(0, limit) },
+  getRandom(arr) {
+    const out = arr.sort(() => { return 0.5 - Math.random() }) 
+    return arr.slice(0, 1)
+  },
+
+  //jinja
+  rejectattr(arr, attr, value) {
+    if (!Array.isArray(arr)) return []
+    return arr.filter(item => {
+      const v = attr.split('.').reduce((o, k) => o?.[k], item)
+      return v !== value
+    })
+  },
 
 }
