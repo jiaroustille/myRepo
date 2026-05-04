@@ -8,7 +8,9 @@
     <time>{{ content | readingTime }}</time>
   </header>
 
-  {{ content | safe }}
+  <div>
+    {{ content | safe }}
+  </div>
 
   <footer>
     {% include "tags.html" %}
