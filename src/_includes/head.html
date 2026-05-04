@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{{ title | deslugify }} | {{ site.title }}</title>
+<title>{{ title }} | {{ site.title }}</title>
 <link rel="canonical" href="https://{{ site.domain }}{{ page.url }}">
 <meta name="description" content="{{ content | genDescription }}">
 
@@ -10,7 +10,7 @@
 <link rel="me" href="{{ i.href }}">
 {% endfor %}
 
-<meta property="og:title" content="{{ title | deslugify }}">
+<meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ content | genDescription }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://{{ site.domain }}{{ page.url }}">
@@ -18,7 +18,7 @@
 <meta property="og:image" content="{{ site.preview }}" />
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ title | deslugify }}">
+<meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ content | genDescription }}">
 
 <link rel="icon" href="{{ site.favicon }}">
