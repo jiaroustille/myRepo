@@ -1,5 +1,6 @@
 ---
 eleventyExcludeFromCollections: true
+layout: base
 ---
 
 <nav style="margin: 1rem 0">

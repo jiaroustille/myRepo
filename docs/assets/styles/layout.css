@@ -3,7 +3,7 @@ body {
   color: var(--clr-foreground);
   background-color: var(--clr-background);
   display: grid;
-  grid-template-columns: auto 900px auto;
+  grid-template-columns: auto 1200px auto;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     "left header right"

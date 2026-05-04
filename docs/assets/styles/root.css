@@ -64,4 +64,5 @@ html {
   height: 100%;
   cursor: default;
   word-break: pretty;
+  scroll-behavior: smooth;
 }
