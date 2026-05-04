@@ -5,6 +5,7 @@ import { HtmlBasePlugin } from "@11ty/eleventy"
 import { IdAttributePlugin } from "@11ty/eleventy"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
+import Fetch from "@11ty/eleventy-fetch"
 import markdownIt from "markdown-it"
 import options from "./src/_data/options.js"
 
