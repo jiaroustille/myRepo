@@ -4,6 +4,7 @@ export default {
   favicon: "/assets/img/favicon.png",
   preview: "/assets/img/preview.png",
   language: "en",
+  repo: "myRepo",
   author: {
     name: "Jia-Rou",
     socials: [

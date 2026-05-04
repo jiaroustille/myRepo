@@ -1,3 +1,6 @@
+import * as childProcess from "child_process"
+import path from "path"
+
 function safeDate(input) {
   const d = new Date(input)
   return isNaN(d) ? null : d
@@ -84,7 +87,7 @@ export default {
   // maths
   setLimit(arr, int) { return arr.slice(0, int) },
   getRandom(arr) {
-    const out = arr.sort(() => { return 0.5 - Math.random() }) 
+    const out = arr.sort(() => { return 0.5 - Math.random() })
     return arr.slice(0, 1)
   },
 
@@ -96,5 +99,27 @@ export default {
       return v !== value
     })
   },
+
+  // git
+  gitlog(filePath) {
+    if (!filePath) return false
+    const absolute = path.resolve("./src/routes", filePath)
+    let fileHistory = childProcess
+      .execSync(`git log --pretty=tformat:"%H | %cs | %s"`)
+      .toString()
+      .trim()
+    if (fileHistory === "") return false
+    const fileLog = []
+    fileHistory.split(/\r?\n/).forEach(change => {
+      const [hash, date, subject] = change.split(" | ")
+      fileLog.push({ hash, date, subject })
+    })
+    return fileLog
+  },
+
+  skipFirst(arr, count) {
+    if (!Array.isArray(arr)) return []
+    return arr.slice(count)
+  }
 
 }
