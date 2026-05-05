@@ -69,7 +69,7 @@
   "@id": "https://jiaroustille.github.io/writings/testing.html"
   },
   
-  "wordCount": 385,
+  "wordCount": 476,
   "inLanguage": "en"
 }
 </script>
@@ -667,7 +667,49 @@
 </tr>
 </tbody>
 </table>
-
+<hr>
+<div class="slider">
+      <button style="max-height: 300px; border: none;" onclick="prevSlide()">&lt;&lt;</button>
+      <div class="slides"><figure class="slide">
+            <picture><source type="image/webp" srcset="/myRepo/.11ty/image/?src=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Ffunny-bts-pictures-e8ibgwd0wkgcke08.jpg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/myRepo/.11ty/image/?src=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Ffunny-bts-pictures-e8ibgwd0wkgcke08.jpg&width=300&format=jpeg&via=transform" alt="BTS on the red carpet" width="300" height="360" style="width: 100%; height: 100%; object-fit: cover;"></picture>
+          <figcaption>BTS on the red carpet</figcaption>
+        </figure>
+<figure class="slide">
+            <picture><source type="image/webp" srcset="/myRepo/.11ty/image/?src=https%3A%2F%2Fbillboard-com-br.s3.amazonaws.com%2Fwp-content%2Fuploads%2F2025%2F12%2F12091240%2FBTS-em-nova-foto-Reproducao_Instagram.webp&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/myRepo/.11ty/image/?src=https%3A%2F%2Fbillboard-com-br.s3.amazonaws.com%2Fwp-content%2Fuploads%2F2025%2F12%2F12091240%2FBTS-em-nova-foto-Reproducao_Instagram.webp&width=300&format=jpeg&via=transform" alt="BTS mirror selca" width="300" height="150" style="width: 100%; height: 100%; object-fit: cover;"></picture>
+          <figcaption>BTS mirror selca</figcaption>
+        </figure>
+<figure class="slide">
+            <picture><source type="image/webp" srcset="/myRepo/.11ty/image/?src=https%3A%2F%2Fcdn.wallpapersafari.com%2F83%2F47%2FRPfUVW.jpeg&width=300&format=webp&via=transform 300w"><img loading="lazy" decoding="async" src="/myRepo/.11ty/image/?src=https%3A%2F%2Fcdn.wallpapersafari.com%2F83%2F47%2FRPfUVW.jpeg&width=300&format=jpeg&via=transform" alt="BTS family photo" width="300" height="168" style="width: 100%; height: 100%; object-fit: cover;"></picture>
+          <figcaption>BTS family photo</figcaption>
+        </figure></div>
+      <button style="max-height: 300px; border: none;" onclick="nextSlide()">&gt;&gt;</button>
+    </div>
+    <script>
+      const slides = document.querySelectorAll(".slides .slide")
+      let slideIndex = 0
+      function initSlider() { slides[slideIndex].classList.add("currentSlide") }
+      function showSlide(index) {
+        slides[slideIndex].classList.remove("currentSlide")
+        slideIndex = (index + slides.length) % slides.length
+        slides[slideIndex].classList.add("currentSlide")
+      }
+      function prevSlide() { showSlide(slideIndex - 1) }
+      function nextSlide() { showSlide(slideIndex + 1) }
+      initSlider()
+    </script>
+    <style>
+      .slider {
+        width: 348px;
+        min-height: 372px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        margin: 1rem auto;
+      }
+      .slide { display: none; width: 300px; height: 300px; }
+      .currentSlide { display: block; }
+      .slide img { object-fit: cover; }
+    </style>
     
   </main>
   <footer class="h-card">

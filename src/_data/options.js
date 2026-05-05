@@ -1,8 +1,9 @@
 export default {
   markdownIt: {
   	html: true,
-		breaks: true,
+		breaks: false,
 		linkify: true,
+		xhtmlOut: false
   },
   eleventyImageTransformPlugin: {
 		htmlOptions: {

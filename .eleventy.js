@@ -10,7 +10,8 @@ import markdownIt from "markdown-it"
 import options from "./src/_data/options.js"
 
 export default function (eleventyConfig) {
-  eleventyConfig.setLibrary("md", markdownIt(options.markdownIt))
+  const md = markdownIt(options.markdownIt)
+  eleventyConfig.setLibrary("md", md)
 
   Object.keys(filters).forEach((name) => { eleventyConfig.addFilter(name, filters[name]) })
   Object.keys(collections).forEach((name) => { eleventyConfig.addCollection(name, collections[name]) })

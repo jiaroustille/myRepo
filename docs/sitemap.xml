@@ -3,7 +3,7 @@
 
   <url>
     <loc>/</loc>
-    <lastmod>2026-05-04T08:47:09.960Z</lastmod>
+    <lastmod>2026-05-05T05:57:10.086Z</lastmod>
   </url>
 
   
@@ -73,6 +73,16 @@
   </url>
   
   <url>
+    <loc>/tags/novel.html</loc>
+    <lastmod>2026-05-04T08:47:09.960Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/art.html</loc>
+    <lastmod>2026-05-04T08:47:09.960Z</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/diary.html</loc>
     <lastmod>2026-05-04T08:47:09.960Z</lastmod>
   </url>
@@ -85,6 +95,11 @@
   <url>
     <loc>/tags/all.html</loc>
     <lastmod>2026-05-04T08:47:09.960Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>/writings/untitled-novel.html</loc>
+    <lastmod>2026-05-05T05:57:10.086Z</lastmod>
   </url>
   
 

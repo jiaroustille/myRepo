@@ -128,3 +128,15 @@ layout: base
 | ``<details>`` | Expandable details | <details><summary>More</summary>Hidden</details> |
 | ``<dialog>`` | Dialog box | <dialog open>Dialog</dialog> |
 | ``<summary>`` | Summary heading | <summary>Summary</summary> |
+
+***
+
+{% slider [
+  "https://wallpapers.com/images/hd/funny-bts-pictures-e8ibgwd0wkgcke08.jpg",
+  "https://billboard-com-br.s3.amazonaws.com/wp-content/uploads/2025/12/12091240/BTS-em-nova-foto-Reproducao_Instagram.webp",
+  "https://cdn.wallpapersafari.com/83/47/RPfUVW.jpeg"
+], [
+  "BTS on the red carpet",
+  "BTS mirror selca",
+  "BTS family photo"
+], 300, 300 %}
